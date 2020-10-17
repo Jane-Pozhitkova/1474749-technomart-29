@@ -1,74 +1,78 @@
-/* pt-sans-regular - latin_cyrillic */
+/* Закомментировала, потому что подключала в html
 
 @font-face {
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 400;
-    src: local('PT Sans'), local('PTSans-Regular'), url('..//fonts/ptsans.woff2') format('woff2'), /* Super Modern Browsers */
-    url('..//fonts/ptsans.woff') format('woff'), /*Modern Browsers*/
+    src: url('../fonts/ptsans.woff2') format('woff2'), 
+    url('../fonts/ptsans.woff') format('woff') 
 }
 
-/* pt-sans-700 - latin_cyrillic */
+
 
 @font-face {
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 700;
-    src: local('PT Sans Bold'), local('PTSans-Bold'), url('..//fonts/ptsansbold.woff2') format('woff2'), /* Super Modern Browsers */
-    url('..//fonts/ptsansbold.woff') format('woff'), /* Modern Browsers */
+    src: url('../fonts/ptsansbold.woff2') format('woff2'), 
+    url('../fonts/ptsansbold.woff') format('woff') 
 }
 
-/* cuprum-regular - latin_cyrillic */
+
 
 @font-face {
     font-family: 'Cuprum';
     font-style: normal;
     font-weight: 400;
-    src: local('Cuprum'), url('..//fonts/cuprum.woff2') format('woff2'), /* Super Modern Browsers */
-    url('..//fonts/cuprum.woff') format('woff'), /* Modern Browsers */
+    src: url('../fonts/cuprum.woff2') format('woff2'), 
+    url('../fonts/cuprum.woff') format('woff') 
 }
 
-/* cuprum-700 - latin_cyrillic */
+
 
 @font-face {
     font-family: 'Cuprum';
     font-style: normal;
     font-weight: 700;
-    src: local('Cuprum bold'), url('..//fonts/cuprumbold.woff2') format('woff2'), /* Super Modern Browsers */
-    url('..//fonts/cuprumbold.woff') format('woff'), /* Modern Browsers */
+    src: url('../fonts/cuprumbold.woff2') format('woff2'), 
+    url('../fonts/cuprumbold.woff') format('woff') 
 }
 
-/* cuprum-italic - latin_cyrillic */
 
 @font-face {
     font-family: 'Cuprum';
     font-style: italic;
     font-weight: 400;
-    src: local('Cuprum italic'), url('..//fonts/cuprumitalic.woff2') format('woff2'), /* Super Modern Browsers */
-    url('..//fonts/cuprumitalic.woff') format('woff'), /* Modern Browsers */
+    src: url('../fonts/cuprumitalic.woff2') format('woff2'), 
+    url('../fonts/cuprumitalic.woff') format('woff') 
 }
 
-/* cuprum-700italic - latin_cyrillic */
+
 
 @font-face {
     font-family: 'Cuprum';
     font-style: italic;
     font-weight: 700;
-    src: local('Cuprum bold italic'), url('..//fonts/cuprumbolditalic.woff2') format('woff2'), /* Super Modern Browsers */
-    url('..//fonts/cuprumbolditalic.woff') format('woff'), /* Modern Browsers */
-}
+    src: url('../fonts/cuprumbolditalic.woff2') format('woff2'), 
+    url('../fonts/cuprumbolditalic.woff') format('woff') 
+} */
 
 :root {
     --red: #EE3643;
+    --red-logo: #b52933;
     --dark: #293449;
     --dark2: #32425C;
-    --light: #B7BFC8;
-    --light2: #C5C5C5;
-    --light3: #F3F7F9;
-    --light4: #F9F5F0;
-    --light5: #F1F5F7;
+    --light-grey-icon: #B7BFC8;
+    --light-grey-icon2: #C5C5C5;
+    --light-grey-border: #F3F7F9;
+    --light-grey-index: #F9F5F0;
+    --light-grey-services: #F1F5F7;
     --light-price: #A9A9A9;
     --light-border: #EAEAEA;
+    --light-grey-header: #f3f7f8;
+    --opacity-white: rgba(255, 255, 255, 0.3);
+    --opacity-grey: rgba(197, 197, 197, 0.3);
+    --opacity-grey-dark: rgba(169, 169, 169, 0.3);
     --green: #63A63E;
     --white: #FFFFFF;
     --black: #000000;
@@ -83,6 +87,7 @@
     --dark-red: #BA2732;
     --dark-red2: #CA2C37;
     --super-dark: #161D29;
+    --shadow: rgba(0, 0, 0, 0.15);
     --dark3: #212A3A;
     --super-dark2: #1D2739;
     --bright-green: #5FBB2D;
@@ -90,9 +95,10 @@
     --active-white: rgba(255, 255, 255, 0.5);
     --dark-grey-blue: #3D546F;
     --dark3: #3D546F;
-    --light6: #F7F3EC;
-    --light7: #E5E5E5;
-    --light8: #B5B5B5;
+    --light-grey-sorting: #F7F3EC;
+    /* не помню откуда их взяла, чуть позднее посмотрю, скорее всего со второй страницы
+    --light-grey7: #E5E5E5;
+    --light-grey8: #B5B5B5; */
 }
 
 /*общие*/
@@ -105,7 +111,6 @@ body {
     font-size: 13px;
     line-height: 24px;
     font-weight: 400;
-    color: var(--basic-white);
     background-color: var(--white);
 }
 
@@ -118,34 +123,31 @@ img {
     height: auto;
 }
 
-ul {
+.page-body ul {
     list-style: none;
 }
 
 /*шапка*/
 
-.top-header {
-    background: var(--dark);
+h1 {
+    display: none;
 }
 
-.main-header-logo {
-    width: 220px;
-    background: var(--red);
-    box-shadow: 0px -5px 0px 0px #000000 24% inset;
-    height: 47px;
-    width: 220px;
-    padding-top: 12px;
-    padding-bottom: 17px;
-    padding-left: 56px;
-    padding-right: 56px;
+.top-header {
+    background-color: var(--dark);
+}
+
+.main-header-logo, .main-footer-logo {
+    background-color: var(--red);
+    box-shadow: 0px -5px 0px 0p var(--red-logo) 24%;
 }
 
 .main-header-logo:active {
-    background: var(--dark-red);
+    background-color: var(--dark-red);
 }
 
 .bookmarks, .shopping-cart, .ordering {
-    font-family: "Cuprum";
+    font-family: "Cuprum", Arial, sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
@@ -153,11 +155,11 @@ ul {
 }
 
 .bookmarks:active {
-    background: var(--super-dark);
+    background-color: var(--super-dark);
 }
 
 .ordering:hover {
-    background: var(--bright-green);
+    background-color: var(--bright-green);
 }
 
 .ordering:active, .site-search:active, .bookmarks:active, .shopping-cart:active {
@@ -165,7 +167,7 @@ ul {
 }
 
 .store-description {
-    font-family: 'Cuprum';
+    font-family: 'Cuprum', Arial, sans-serif;
     font-style: italic;
     font-weight: normal;
     font-size: 16px;
@@ -173,16 +175,16 @@ ul {
     color: var(--red)
 }
 
-.contacts a {
-    font-family: 'Cuprum';
+.main-header-contacts a {
+    font-family: 'Cuprum', Arial, sans-serif;
     font-weight: bold;
     font-size: 21px;
     line-height: 30px;
     color: var(--red);
 }
 
-.contacts p {
-    font-family: 'Cuprum';
+.main-header-contacts p {
+    font-family: 'Cuprum', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -190,8 +192,8 @@ ul {
     color: var(--dark2);
 }
 
-.input-form a {
-    font-family: 'Cuprum';
+.user-block a {
+    font-family: 'Cuprum', Arial, sans-serif;
     font-weight: 400;
     font-size: 21px;
     line-height: 21px;
@@ -199,7 +201,7 @@ ul {
 }
 
 .ordering {
-    background: var(--green);
+    background-color: var(--green);
 }
 
 .login-link:hover, .registration-link:hover {
@@ -210,31 +212,35 @@ ul {
     color: var(--light2)
 }
 
-.main-navigation {
-    background: var(--dark2);
+.main-header-navigation {
+    background-color: var(--dark2);
 }
 
-.main-navigation ul a {
-    font-family: Cuprum;
+.main-header-navigation a {
+    font-family: 'Cuprum', Arial, sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     color: var(--white)
 }
 
-.main-navigation ul a:hover {
-    background: var(--dark);
+.main-header-navigation a:hover {
+    background-color: var(--dark);
 }
 
-.main-navigation ul a:active {
-    background: var(--super-dark2);
+.main-header-navigation a:active {
+    background-color: var(--super-dark2);
     color: var(--active-white)
 }
 
 /*промо-блок*/
 
-.promo h3 {
-    font-family: Cuprum;
+.promo h2 {
+    display: none;
+}
+
+.promo-item h3 {
+    font-family: 'Cuprum', Arial, sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
@@ -242,37 +248,48 @@ ul {
 }
 
 .materials {
-    background: var(--yellow);
+    background-color: var(--yellow);
 }
 
 .tool {
-    background: var(--blue);
+    background-color: var(--blue);
 }
 
 .technics {
-    background: var(--purple);
+    background-color: var(--purple);
 }
 
 .discounts {
-    background: var(--light-green);
+    background-color: var(--light-green);
 }
 
 .delivery {
-    background: var(--yellow2);
+    background-color: var(--yellow2);
 }
 
-.promo a {
-    font-family: Cuprum;
+.button-promo {
+    background-color: var(--opacity-white);
+}
+
+.button-promo:hover {
+    background-color: var(--opacity-grey);
+}
+
+.button-promo:active {
+background-color: var(--opacity-grey-dark);
+}
+
+.promo-item a {
+    font-family: 'Cuprum', Arial, sans-serif;
     font-weight: normal;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
-    /*background: var(--white);*/
-    color: var(--white)
+    color: var(--white);
 }
 
-.slide h3 {
-    font-family: Cuprum;
+.slider-title {
+    font-family: 'Cuprum', Arial, sans-serif;
     font-weight: bold;
     font-size: 36px;
     line-height: 36px;
@@ -280,18 +297,21 @@ ul {
     text-transform: uppercase;
 }
 
-.slide p {
-    font-family: Cuprum;
+.slider-text {
+    font-family: 'Cuprum', Arial, sans-serif;
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
     color: var(--white);
 }
 
-.slide a {
-    background: var(--red);
+.button {
+    background-color: var(--red);
     color: var(--white);
-    font-family: Cuprum;
+}
+
+.slide a {
+    font-family: 'Cuprum', Arial, sans-serif;
     font-weight: normal;
     font-size: 14px;
     line-height: 18px;
@@ -299,25 +319,163 @@ ul {
 }
 
 .slide a:hover {
-    background: var(--dark-red2);
+    background-color: var(--dark-red2);
 }
 
 .slide a:active {
-    background: var(--dark-red);
+    background-color: var(--dark-red);
 }
 
-.product-list li {
+/*index-section*/
+
+.index-section-header {
+    background-color: var(--light-grey-index);
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--dark2);
+}
+
+.product-title a {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--black);
+}
+
+.product-old-price {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--light-price)
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--red);
+}
+
+.partner img, .product {
     border: 1px solid var(--light-border);
 }
 
-.product-list li:hover {
-    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+.partner img:hover, .product:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.companies-list li:hover {
-    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
-}
-
-.companies-list li:active {
+.partner img:active {
     opacity: 0.5;
+}
+
+.services {
+    background-color: var(--light-grey-services)
+}
+
+.services-title, .about-title, .contacts-title {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.services-title p, .services-delivery p, .about-text, .contacts-title p {
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--black);
+}
+
+.services-button {
+font-family: 'Cuprum', Arial, sans-serif;
+font-weight: bold;
+font-size: 21px;
+line-height: 30px;
+color: var(--white);
+background-color: var(--dark2);
+}
+
+.services-button:hover {
+    background-color: var(--dark);
+}
+
+.services-button:active {
+    background-color: var(--white);
+    color: var(--dark2);
+}
+
+.about-list {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.navigation-block a, .main-footer-contacts {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.navigation-block a:hover {
+    text-decoration: underline;
+}
+
+.navigation-block a:active {
+    opacity: 0.5;
+}
+
+.main-footer-text {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--white);
+}
+
+.main-footer-text a:hover {
+    text-decoration: underline;
+}
+
+.main-footer-text a:active {
+    color: var(--red);
+    text-decoration: none;
+}
+
+.main-footer-contacts, .main-footer-contacts a {
+    color: var(--light-grey-header)
+}
+
+.top a {
+    color: var(--light-grey-services)
+}
+
+.bottom a, .main-footer-feedback a {
+    color: var(--dark-yellow)
+}
+
+.main-footer {
+    background-color: var(--dark2);
+}
+
+.main-footer-bottom {
+    background-color: var(--dark);
+}
+
+.socials h2 {
+display: none;
+}
+.socials a {
+    background-color: var(--dark3);
+}
+
+
+.socials a:hover, .socials a:active {
+    background-color: var(--red);
 }
