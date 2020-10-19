@@ -5,9 +5,7 @@
   <meta charset="utf-8">
   <title>Интернет-магазин Техномарт</title>
   <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
@@ -24,7 +22,7 @@
       <a class="ordering" href="">Оформить заказ</a>
     </div>
     <div>
-      <div> <!--не понимаю нужен ли тут див и какой тогда класс? тут просто блок с текстом телефоном и форма входа, разные элементы --> 
+      <div>
       <p class="store-description">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
         <div class="main-header-contacts">
           <a href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -49,25 +47,24 @@
     </div>
   </header>
   <main class="container">
-    <h1>Интернет-магазин инструментов Техномарт</h1>
+    <h1 class="visually-hidden">Интернет-магазин инструментов Техномарт</h1>
     <section class="promo">
-      <h2>Промо блок</h2>
+      <h2 class="visually-hidden">Промо блок</h2>
       <div class="promo-item materials">
-        <h3>Материалы</h3><a class="button-promo" href="">на любой вкус</a>
+        <h3 class="promo-item-title">Материалы</h3><a class="button-promo" href="">на любой вкус</a>
       </div>
       <div class="promo-item tool">
-        <h3>Инструмент</h3><a class="button-promo" href="">на все случаи жизни</a>
+        <h3 class="promo-item-title">Инструмент</h3><a class="button-promo" href="">на все случаи жизни</a>
       </div>
       <div class="promo-item technics">
-        <h3>Техника</h3><a class="button-promo" href="">для стройки</a>
+        <h3 class="promo-item-title">Техника</h3><a class="button-promo" href="">для стройки</a>
       </div>
       <div class="promo-item discounts">
-        <h3>Скидки 50%</h3><a class="button-promo" href="">на 350 товаров</a>
+        <h3 class="promo-item-title">Скидки 50%</h3><a class="button-promo" href="">на 350 товаров</a>
       </div>
       <div class="promo-item delivery">
-        <h3>Доставка</h3><a class="button-promo" href="">бесплатно</a>
+        <h3 class="promo-item-title">Доставка</h3><a class="button-promo" href="">бесплатно</a>
       </div>
-      <div>
         <div class="slider">
           <div class="slide">
             <!--<img src="img/Layer-99.jpg" width="620" height="266" alt="Перфораторы">-->
@@ -88,7 +85,6 @@
           <button type="button" class="slider-button"></button>
           <button type="button" class="slider-button"></button>
         </div>
-      </div>
     </section>
     <section class="index-section">
       <div class="index-section-header">
@@ -108,7 +104,7 @@
               <a class="product-price" href="">25500 Р.</a>
             </article>
           </li>
-          <li>
+          <li class="index-section-item">
             <article class="product">
               <a class="product-image-holder" href=""><img src="img/Object2.jpg" width="127" height="112"
                   alt="Перфоратор BOSCHBFG 3000"></a>
@@ -119,7 +115,7 @@
               <a class="product-price" href="">15500 Р.</a>
             </article>
           </li>
-          <li>
+          <li class="index-section-item">
             <article class="product">
               <a class="product-image-holder" href=""><img src="img/Object3.jpg" width="144" height="128"
                   alt="Перфоратор BOSCH BFG 6000"></a>
@@ -130,7 +126,7 @@
               <a class="product-price" href="">25500 Р.</a>
             </article>
           </li>
-          <li>
+          <li class="index-section-item">
             <article class="product">
               <a class="product-image-holder" href=""><img src="img/Object4.jpg" width="127" height="112"
                   alt="Перфоратор BOSCH BFG 2000"></a>
@@ -147,35 +143,48 @@
         <a class="button" href="">все производители</a>
       </div>
       <ul class="index-section-list">
-        <li class="partner"><a href=""><img src="img/логотип_партнера.png" width="220" height="145" alt="BOSCH"></a></li>
-        <li class="partner"><a href=""><img src="img/логотип_партнера2.png" width="220" height="145" alt="MAKITA"></a></li>
-        <li class="partner"><a href=""><img src="img/логотип_партнера3.png" width="220" height="145" alt="DeWALT"></a></li>
-        <li class="partner"><a href=""><img src="img/логотип_партнера4.png" width="220" height="145" alt="ИНТЕРСКОЛ"></a></li>
-        <li class="partner"><a href=""><img src="img/логотип_партнера5.png" width="220" height="145" alt="HITACHI"></a></li>
-        <li class="partner"><a href=""><img src="img/логотип_партнера6.png" width="220" height="145" alt="LG"></a></li>
-        <li class="partner"><a href=""><img src="img/логотип_партнера7.png" width="220" height="145" alt="AEG"></a></li>
-        <li class="partner"><a href=""><img src="img/логотип_партнера8.png" width="220" height="145" alt="METABO"></a></li>
+        <li class="index-section-item"><a class="partner" href=""><img src="img/логотип_партнера.png" width="220" height="145" alt="BOSCH"></a></li>
+        <li class="index-section-item"><a class="partner" href=""><img src="img/логотип_партнера2.png" width="220" height="145" alt="MAKITA"></a></li>
+        <li class="index-section-item"><a class="partner" href=""><img src="img/логотип_партнера3.png" width="220" height="145" alt="DeWALT"></a></li>
+        <li class="index-section-item"><a class="partner" href=""><img src="img/логотип_партнера4.png" width="220" height="145" alt="ИНТЕРСКОЛ"></a></li>
+        <li class="index-section-item"><a class="partner" href=""><img src="img/логотип_партнера5.png" width="220" height="145" alt="HITACHI"></a></li>
+        <li class="index-section-item"><a class="partner" href=""><img src="img/логотип_партнера6.png" width="220" height="145" alt="LG"></a></li>
+        <li class="index-section-item"><a class="partner" href=""><img src="img/логотип_партнера7.png" width="220" height="145" alt="AEG"></a></li>
+        <li class="index-section-item"><a class="partner" href=""><img src="img/логотип_партнера8.png" width="220" height="145" alt="METABO"></a></li>
       </ul>
     </section>
     <section class="services">
       <h2 class="services-title">Сервисы</h2>
       <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-      <div class="services-item">
+      <div class="services-content">
+        <div class="services-tabs">
+          <ul class="services-tabs-list">
+            <li class="services-tabs-item"><button type="button" class="services-tabs-button">Доставка</button></li>
+            <li class="services-tabs-item"><button type="button" class="services-tabs-button">Гарантия</button></li>
+            <li class="services-tabs-item"><button type="button" class="services-tabs-button">Кредит</button></li>
+          </ul>
+        </div>
         <div class="services-delivery">
           <h3>Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо
             к вашему подъезду совершенно бесплатно!
             Ведь мы неплохо заработаем,
             поднимая его на ваш этаж!</p>
-          <img src="img/Layer-131-1.png" width="468" height="261" alt="Доставка">
         </div>
-        <div class="services-tabs">
-          <ul class="services-tabs-list">
-            <li class="services-tabs-item"><button type="button" class="services-button">Доставка</button></li>
-            <li class="services-tabs-item"><button type="button" class="services-button">Гарантия</button></li>
-            <li class="services-tabs-item"><button type="button" class="services-button">Кредит</button></li>
-          </ul>
+        <div class="services-garantiya">
+          <h3>Гарантия</h3>
+          <p>Если купленный у нас товар поломается или заискрит, 
+            а также в случае пожара, спровоцированного его
+             возгоранием,  вы всегда можете быть уверены в нашей
+              гарантии. Мы обменяем сгоревший товар на новый.
+               Дом уж восстановите как-нибудь сами.</p>
+        </div>
+        <div class="services-credit">
+          <h3>Кредит</h3>
+          <p>Залезть в долговую яму стало проще!
+             Кредитные консультанты придут вам на помощь.</p>
+            <button type="button" class="button button-services-credit">Отправить заявку</button>  
         </div>
       </div>
     </section>
@@ -187,9 +196,9 @@
       <p class="about-text">Мы можем доставить ваш товар в самые отдаленные точки России!<br>
         Техномарт работает со многими транспортными компаниями:</p>
       <ul class="about-list">
-        <li>Деловые линии</li>
-        <li>Автотрейдинг</li>
-        <li>ЖелДорЭкспедиция</li>
+        <li class="about-list-item">Деловые линии</li>
+        <li class="about-list-item">Автотрейдинг</li>
+        <li class="about-list-item">ЖелДорЭкспедиция</li>
       </ul>
       <a class="button" href="">Подробнее о компании</a>
     </section>
@@ -197,7 +206,7 @@
       <h2 class="contacts-title">Контакты</h2>
       <p>Вы можете забрать товар сами,<br>
         заехав в наш офис:</p>
-      <a class="contacts-map" href=""><img src="img/ObjecMap.png" width="300" height="158" alt="Карта"></a><br>
+      <a class="contacts-map" href=""><img src="img/ObjecMap.png" width="300" height="158" alt="Карта"></a>
       <button type="button" class="button">Заблудились? Напишите нам!</button>
     </section>
   </main>
@@ -223,11 +232,13 @@
       </ul>
     </div>
     <div class="main-footer-bottom">
+      <div class="copyright">
       <p class="main-footer-text">&copy 2010–2019 Компания «Техномарт» <br>
         Все права защищены</p>
+        </div>
       <section class="socials">
-        <h2>Социальные сети</h2>
-        <ul>
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <ul class="socials-list">
           <li>
             <a class="vk" href="#">Контакт</a>
           </li>
@@ -250,5 +261,4 @@
     </div>
   </footer>
 </body>
-
 </html>
