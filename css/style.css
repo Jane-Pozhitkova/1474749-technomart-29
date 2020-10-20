@@ -241,9 +241,7 @@ img {
 .button-promo:active {
 background-color: var(--opacity-grey-dark);
 }
-
-    
-}
+   
 
 .slider-title {
     font-family: 'Cuprum', Arial, sans-serif;
@@ -328,9 +326,15 @@ background-color: var(--opacity-grey-dark);
     background-color: var(--red);
 }
 
-.partner, 
+
 .product {
     border: 1px solid var(--light-border);
+}
+
+.partner {
+    border: 1px solid var(--light-border);
+    width: 220px;
+    height: 145px;
 }
 
 .partner:hover,
